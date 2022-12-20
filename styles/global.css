@@ -3,42 +3,50 @@
 @tailwind utilities;
 
 @layer base {
-    .prose a {
-        @apply text-purple-400 hover:text-purple-500;
-    }
+  .prose a {
+    @apply text-purple-400 hover:text-purple-500;
+  }
 
-    a {
-        @apply text-purple-400 hover:text-purple-500;
-    }
+  a {
+    @apply text-purple-400 hover:text-purple-500;
+  }
 
-    a>img {
-        @apply border-2 border-zinc-500 hover:border-zinc-400;
-    }
+  a > img {
+    @apply border-2 border-zinc-500 hover:border-zinc-400;
+  }
 
-    h2 {
-        @apply py-2 text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-pink-400 to-orange-500
-    }
+  h2 {
+    @apply py-2 text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-pink-400 to-orange-500;
+  }
 
-    li.list-hz {
-        @apply inline-block px-2
-    }
+  li.list-hz {
+    @apply inline-block px-2;
+  }
 
-    .bg-overlapping-circles {
-        background-color: #18181b;
-        background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23424242' fill-opacity='0.13'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
+  .bg-overlapping-circles {
+    background-color: #18181b;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23424242' fill-opacity='0.13'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
 
-    .btn {
-        @apply text-base font-semibold leading-snug bg-purple-600 text-white rounded-md shadow-md hover:bg-purple-700 hover:text-white focus:outline-none focus:bg-purple-700 focus:text-white transition ease-in-out duration-150
-    }
+  .btn {
+    @apply text-base font-semibold leading-snug bg-purple-600 text-white rounded-md shadow-md hover:bg-purple-700 hover:text-white focus:outline-none focus:bg-purple-700 focus:text-white transition ease-in-out duration-150;
+  }
+
+  figure figcaption {
+    @apply text-center;
+  }
 }
 
 @layer utilities {
-	.prose :where(iframe):not(:where([class~="not-prose"] *)) {
-		@apply aspect-video w-full h-auto
-	}
+  .prose :where(iframe):not(:where([class~="not-prose"] *)) {
+    @apply aspect-video w-full h-auto;
+  }
 
-    .prose :where(img.max-size-md):not(:where([class~="not-prose"] *)) {
-		@apply w-2/3 md:w-1/2 h-auto
-	}
+  .prose :where(img.max-size-md):not(:where([class~="not-prose"] *)) {
+    @apply w-2/3 md:w-1/2 h-auto;
+  }
+
+  .prose :where(img.max-size-lg):not(:where([class~="not-prose"] *)) {
+    @apply w-full md:w-3/5 h-auto;
+  }
 }
